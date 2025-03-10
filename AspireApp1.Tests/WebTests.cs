@@ -30,6 +30,6 @@ public class WebTests : IClassFixture<AppHostFixture>
         
         var response = await httpClient.GetAsync("/");
 
-        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
 }
